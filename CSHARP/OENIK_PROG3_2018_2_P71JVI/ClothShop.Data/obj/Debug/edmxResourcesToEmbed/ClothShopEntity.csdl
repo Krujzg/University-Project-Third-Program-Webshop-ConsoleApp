@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="DatabaseModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Megrendeles">
+    <Key>
+      <PropertyRef Name="RendelesID" />
+    </Key>
+    <Property Name="RendelesID" Type="Int32" Nullable="false" />
+    <Property Name="Leadasi_idopont" Type="DateTime" Precision="0" />
+    <Property Name="Hatarido" Type="DateTime" Precision="0" />
+    <Property Name="DB_szam" Type="Int32" />
+    <Property Name="VasarloID" Type="Int32" Nullable="false" />
+    <Property Name="RuhaID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Megrendelo" Relationship="Self.FK_MegrendelesXMegrendelo" FromRole="Megrendeles" ToRole="Megrendelo" />
+  </EntityType>
+  <EntityType Name="Megrendelo">
+    <Key>
+      <PropertyRef Name="VasarloID" />
+    </Key>
+    <Property Name="VasarloID" Type="Int32" Nullable="false" />
+    <Property Name="Nev" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Cim" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Varos" Type="String" MaxLength="32" FixedLength="false" Unicode="true" />
+    <Property Name="Iranyitoszam" Type="String" MaxLength="9" FixedLength="false" Unicode="true" />
+    <Property Name="Telefonszam" Type="String" MaxLength="18" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Megrendeles" Relationship="Self.FK_MegrendelesXMegrendelo" FromRole="Megrendelo" ToRole="Megrendeles" />
+  </EntityType>
+  <EntityType Name="Ruha">
+    <Key>
+      <PropertyRef Name="RuhaID" />
+    </Key>
+    <Property Name="RuhaID" Type="Int32" Nullable="false" />
+    <Property Name="Ar" Type="Int32" />
+    <Property Name="Tipus" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+    <Property Name="Anyag" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+    <Property Name="Meret" Type="Int32" />
+  </EntityType>
+  <Association Name="FK_MegrendelesXMegrendelo">
+    <End Role="Megrendelo" Type="Self.Megrendelo" Multiplicity="1" />
+    <End Role="Megrendeles" Type="Self.Megrendeles" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Megrendelo">
+        <PropertyRef Name="VasarloID" />
+      </Principal>
+      <Dependent Role="Megrendeles">
+        <PropertyRef Name="VasarloID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="DBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Megrendeles" EntityType="Self.Megrendeles" />
+    <EntitySet Name="Megrendelo" EntityType="Self.Megrendelo" />
+    <EntitySet Name="Ruha" EntityType="Self.Ruha" />
+    <AssociationSet Name="FK_MegrendelesXMegrendelo" Association="Self.FK_MegrendelesXMegrendelo">
+      <End Role="Megrendelo" EntitySet="Megrendelo" />
+      <End Role="Megrendeles" EntitySet="Megrendeles" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

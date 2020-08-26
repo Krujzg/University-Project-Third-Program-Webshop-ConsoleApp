@@ -1,0 +1,54 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothShop", "OENIK_PROG3_2018_2_P71JVI\ClothShop.csproj", "{AACC97EF-97DA-4F44-A478-F67C8BF416DE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{9F150452-BACD-449F-AA77-BA4FD4F39050}"
+	ProjectSection(SolutionItems) = preProject
+		oenik.ruleset = oenik.ruleset
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothShop.Data", "ClothShop.Data\ClothShop.Data.csproj", "{3EFD2DA1-38F4-4039-9BDD-AD474FEB1466}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothShop.Repository", "ClothShop.Repository\ClothShop.Repository.csproj", "{A190C80E-E94E-4F0B-BA5C-40BF0FC58EA9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothShop.Logic", "ClothShop.Logic\ClothShop.Logic.csproj", "{8EC97B90-B4D4-40B9-BCB9-4CB72F8BB0A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClothShop.Logic.Tests", "ClothShop.Logic.Tests\ClothShop.Logic.Tests.csproj", "{3DCB00BE-A610-411F-86D8-39F2CC437AAC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AACC97EF-97DA-4F44-A478-F67C8BF416DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AACC97EF-97DA-4F44-A478-F67C8BF416DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AACC97EF-97DA-4F44-A478-F67C8BF416DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AACC97EF-97DA-4F44-A478-F67C8BF416DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EFD2DA1-38F4-4039-9BDD-AD474FEB1466}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EFD2DA1-38F4-4039-9BDD-AD474FEB1466}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EFD2DA1-38F4-4039-9BDD-AD474FEB1466}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EFD2DA1-38F4-4039-9BDD-AD474FEB1466}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A190C80E-E94E-4F0B-BA5C-40BF0FC58EA9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A190C80E-E94E-4F0B-BA5C-40BF0FC58EA9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A190C80E-E94E-4F0B-BA5C-40BF0FC58EA9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A190C80E-E94E-4F0B-BA5C-40BF0FC58EA9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8EC97B90-B4D4-40B9-BCB9-4CB72F8BB0A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8EC97B90-B4D4-40B9-BCB9-4CB72F8BB0A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8EC97B90-B4D4-40B9-BCB9-4CB72F8BB0A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8EC97B90-B4D4-40B9-BCB9-4CB72F8BB0A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DCB00BE-A610-411F-86D8-39F2CC437AAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DCB00BE-A610-411F-86D8-39F2CC437AAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DCB00BE-A610-411F-86D8-39F2CC437AAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DCB00BE-A610-411F-86D8-39F2CC437AAC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A9CE5998-FB1C-4ADD-88B2-48103344C59A}
+	EndGlobalSection
+EndGlobal
